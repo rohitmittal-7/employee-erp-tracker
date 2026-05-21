@@ -58,7 +58,29 @@ views/
 public/
 config/
 ```
+## Screenshots
 
+### Login Page
+
+![Login](screenshots/login.png)
+
+---
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+### Employee Management
+
+![Employees](screenshots/employee.png)
+
+---
+
+### Attendance Module
+
+![Attendance](screenshots/attendanceList.png)
 ## Author
 
 Rohit Mittal
