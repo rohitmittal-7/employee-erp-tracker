@@ -1,0 +1,73 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-5">
+
+    <h2>Edit Employee</h2>
+
+    <form action="/updateEmployee/<%= employee.id %>" method="POST">
+
+        <div class="mb-3">
+
+            <label>Name</label>
+
+            <input
+                type="text"
+                name="name"
+                value="<%= employee.name %>"
+                class="form-control"
+                required
+            >
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                name="email"
+                value="<%= employee.email %>"
+                class="form-control"
+                required
+            >
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Department</label>
+
+            <input
+                type="text"
+                name="department"
+                value="<%= employee.department %>"
+                class="form-control"
+                required
+            >
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Salary</label>
+
+            <input
+                type="number"
+                name="salary"
+                value="<%= employee.salary %>"
+                class="form-control"
+                required
+            >
+
+        </div>
+
+        <button class="btn btn-success">
+            Update Employee
+        </button>
+
+    </form>
+
+</div>
+
+<%- include('../partials/footer') %>

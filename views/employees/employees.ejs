@@ -1,0 +1,60 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between mb-3">
+
+        <h2>Employees</h2>
+
+        <a href="/addEmployee" class="btn btn-primary">
+            Add Employee
+        </a>
+
+    </div>
+
+    <table class="table table-bordered">
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+
+        <% employees.forEach(emp => { %>
+
+            <tr>
+                <td><%= emp.id %></td>
+                <td><%= emp.name %></td>
+                <td><%= emp.email %></td>
+                <td><%= emp.department %></td>
+                <td><%= emp.salary %></td>
+
+
+            </tr><td>
+
+    <a 
+        href="/editEmployee/<%= emp.id %>"
+        class="btn btn-warning btn-sm"
+    >
+        Edit
+    </a>
+
+    <a 
+        href="/deleteEmployee/<%= emp.id %>"
+        class="btn btn-danger btn-sm"
+    >
+        Delete
+    </a>
+
+</td>
+
+        <% }) %>
+
+    </table>
+
+</div>
+
+<%- include('../partials/footer') %>
